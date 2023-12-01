@@ -4,12 +4,6 @@
 Pawn::Pawn(bool isWhite, int x, int y)
         : Figure(isWhite, isWhite ? 'P' : 'p', x, y) {}
 
-char Pawn::getSymbol() const {
-    // Implementáld a megfelelő szimbólumot a fehér és fekete bábuk esetére
-    return isWhite ? 'P' : 'p';
-}
-
-
 bool Pawn::isValidMove(int x, int y) const {
     int currentX = getPosition().first;
     int currentY = getPosition().second;

@@ -1,21 +1,17 @@
 #ifndef VALAMI2_BOARD_H
 #define VALAMI2_BOARD_H
 
-#include <iostream>
-#include <vector>
-#include <memory>
-#include "Figure.h"
 
 class Board {
-public:
-    Board();
-    ~Board();
+        public:
+        Board();  // Konstruktor
 
-    void draw() const;
+        void draw() const;  // Tábla kirajzolása
 
-private:
-    std::vector<std::vector<std::unique_ptr<Figure>>> board;
-    void initializeBoard();
+        private:
+        char board[8][8];  // Sakktábla mezői
+
+        void initialize();  // Tábla inicializálása
 };
 
 #endif //VALAMI2_BOARD_H

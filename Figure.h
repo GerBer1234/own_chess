@@ -9,7 +9,7 @@ public:
     Figure(bool isWhite, char symbol, int x, int y);
     virtual ~Figure() = default;
 
-    virtual char getSymbol() const;
+    char getSymbol() const;
     bool isWhite() const;
     std::pair<int, int> getPosition() const;
 

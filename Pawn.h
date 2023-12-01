@@ -3,21 +3,15 @@
 
 #include "Figure.h"
 
-#include "Figure.h"
-
 class Pawn : public Figure {
 public:
     Pawn(bool isWhite, int x, int y);
 
-    char getSymbol() const override;
-    bool isValidMove(int x, int y) const;
-    bool isValidCapture(int x, int y) const;
+    virtual ~Pawn() override = default;
 
-private:
-    bool isWhite;
-    int x;
-    int y;
+    virtual bool isValidMove(int x, int y) const override;
+
+    virtual bool isValidCapture(int x, int y) const override;
 };
-
 
 #endif //VALAMI2_PAWN_H
